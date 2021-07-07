@@ -23,28 +23,6 @@ quote.innerHTML =
 widgetQuote.innerHTML =
   '쉽게 허락한 것은 반드시 신뢰성이 희박하고, \n쉽게 하는일이 많으면 어려움이 많이 따른다 -노자';
 
-//서버에 데이터 요청
-// function getQuote() {
-//   fetch(url)
-//     .then(res => res.json())
-//     .then(res => {
-//       quote.innerHTML = `${res.message} -${res.author}`;
-//       widgetQuote.innerText = quote.innerHTML;
-//     })
-//     .catch(error => alert('통신에러!'));
-// }
-// getQuote();
-
-// //1초에 한번씩 데이터 요청함(하루에 한번이면 1분에 한번씩?)
-// setInterval(() => {
-//   const day = new Date();
-//   //console.log(day.getSeconds());
-//   if (day.getSeconds() === 0) {
-//     //quote.innerHTML = '';
-//     getQuote();
-//   }
-// }, 1000);
-
 //위젯 생성 화면 보이기
 createWidget.addEventListener('click', () => {
   widget.style.display = 'block';
