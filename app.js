@@ -42,7 +42,7 @@ setInterval(() => {
     //quote.innerHTML = '';
     getQuote();
   }
-}, 10000);
+}, 1000);
 
 //위젯 생성 화면 보이기
 createWidget.addEventListener('click', () => {
