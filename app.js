@@ -20,7 +20,7 @@ bg.style.backgroundImage = `url(https://source.unsplash.com/random/${clientWidth
 
 //http url
 const url =
-  'http://ec2-13-125-228-55.ap-northeast-2.compute.amazonaws.com/quote';
+  'https://ec2-13-125-228-55.ap-northeast-2.compute.amazonaws.com/quote';
 
 //서버와 통신
 function getQuote() {
