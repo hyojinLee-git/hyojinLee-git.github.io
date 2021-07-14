@@ -20,7 +20,7 @@ bg.style.backgroundImage = `url(https://source.unsplash.com/random/${clientWidth
 
 //http url
 const url =
-  'https://oneul-myeongeon.com/quote';
+  'http://ec2-15-165-236-247.ap-northeast-2.compute.amazonaws.com/quote';
 
 //서버와 통신
 function getQuote() {
