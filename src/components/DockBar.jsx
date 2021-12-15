@@ -3,13 +3,14 @@ import styled from '@emotion/styled';
 
 const StyledDockBar=styled.div`
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
+    margin-top: 20px;
     display: flex;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255,255,255,0.5);
     border-radius: 20px;
-    height: 15%;
+    height: 10%;
     width: 80%;
 `
 
@@ -20,6 +21,9 @@ const Ul=styled.ul`
     padding: 0;
     justify-content: space-around;
     width: 100%;
+    & img{
+        width: 64px;
+    }
 `
 
 // const Li=styled.li`
@@ -33,7 +37,9 @@ const DockBar = () => {
             <Ul>
                 <li>이력서</li>
                 <li>뭐하지</li>
-                <li>노션</li>
+                <li>
+                    <img src="/images/notion_logo.png" alt="notion"/>
+                </li>
                 <li>tech stack</li>
                 <li>github</li>
                 <li>trash</li>
