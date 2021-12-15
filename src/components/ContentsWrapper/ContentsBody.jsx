@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const StyledContentsBody=styled.div`
-    padding:10px 10px 0 10px ;
+    padding: 16px;
 `
 
 const ContentsBody = () => {

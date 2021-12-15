@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled'
+import {FaApple,FaSearch,FaWifi} from 'react-icons/fa'
 
 const Header=styled.header`
  display: flex;
@@ -23,7 +24,7 @@ const MenuBar = () => {
     return (
         <Header>
             <Ul>
-                <li>logo</li>
+                <li><FaApple/></li>
                 <li>Finder</li>
                 <li>File</li>
                 <li>Edit</li>
@@ -32,10 +33,10 @@ const MenuBar = () => {
   
             </Ul>
             <Ul>
-                <li>wifi</li>
+                <li><FaWifi/></li>
                 <li>2:22 AM</li>
                 <li>HyoJin</li>
-                <li>find</li>
+                <li><FaSearch/></li>
             </Ul>
         </Header>
     );

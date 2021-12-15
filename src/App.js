@@ -5,7 +5,15 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        background: 'url(/images/Desktop.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       {/* redirect to /enter */}
       {/* /는 메인 */}
       <Routes>

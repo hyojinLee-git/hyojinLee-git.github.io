@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const Header=styled.div`
     background-color: white;
     border-radius: 20px;
+    margin-bottom: 16px;
 
 `
 const Ul=styled.ul`
@@ -11,13 +12,14 @@ const Ul=styled.ul`
     display: flex;
     align-items: center;
     padding:0;
+    margin:0;
 `
 const Li=styled.li`
     border-radius: 50%;
     width: 16px;
     height: 16px;
     background-color: ${props=>props.backgroundColor};
-    margin-left: 10px;
+    margin-right: 10px;
 
 `
 const ContentsHeader = ({onCloseContent}) => {

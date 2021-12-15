@@ -7,11 +7,11 @@ const StyledContentsWrapper=styled.div`
     position: absolute;
     width: 100%;
     height: 77%;
-    border: 1px solid;
-    box-sizing: border-box;
     background-color: white;
     border-radius: 20px;
-    margin-top:3%;
+    margin-top:16px;
+    padding: 16px;
+    box-sizing: border-box;
 
 `
 
