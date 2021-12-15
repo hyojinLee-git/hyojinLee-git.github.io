@@ -15,27 +15,27 @@ const Ul=styled.ul`
     justify-content: space-around;
     padding:0;
     width: 25%;
+    list-style: none;
     
 `
-const Li=styled.li`
-    list-style: none;
-`
+
 const MenuBar = () => {
     return (
         <Header>
             <Ul>
-                <Li>logo</Li>
-                <Li>Finder</Li>
-                <Li>File</Li>
-                <Li>Edit</Li>
-                <Li>View</Li>
-                <Li>Go</Li>
+                <li>logo</li>
+                <li>Finder</li>
+                <li>File</li>
+                <li>Edit</li>
+                <li>View</li>
+                <li>Go</li>
+  
             </Ul>
             <Ul>
-                <Li>wifi</Li>
-                <Li>2:22 AM</Li>
-                <Li>HyoJin</Li>
-                <Li>find</Li>
+                <li>wifi</li>
+                <li>2:22 AM</li>
+                <li>HyoJin</li>
+                <li>find</li>
             </Ul>
         </Header>
     );

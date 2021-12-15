@@ -8,6 +8,7 @@ const StlyedComponent=styled.div`
 `
 const Button=styled.button`
     height: 96px;
+    
     &>a{
         color:black;
         text-decoration:none;
