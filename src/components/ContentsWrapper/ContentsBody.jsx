@@ -8,6 +8,7 @@ const StyledContentsBody=styled.div`
     padding-top: 0;
     overflow: auto;
     position: relative;
+    /* 왜 박스 바깥으로 나가는거지? */
     height: 90%;
 `
 

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled'
 import {FaApple,FaSearch,FaWifi} from 'react-icons/fa'
+
 
 const Header=styled.header`
  display: flex;
@@ -8,23 +9,35 @@ const Header=styled.header`
  align-items: center;
  background-color: white;
  height: 5%;
+ border:1px solid;
+ box-sizing: border-box;
 `
 
 const Ul=styled.ul`
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     padding:0;
-    width: 25%;
     list-style: none;
+    &>li{
+        margin-left: 15px;
+        cursor: pointer;
+        padding:1px 5px
+    }
+    &:last-child{
+        margin-right: 15px;
+    }
+    &>li:hover{
+        background-color: skyblue;
+    }
     
 `
 
-const MenuBar = () => {
+const MenuBar = ({showDropdown,toggleDropdown}) => {
     return (
         <Header>
             <Ul>
-                <li><FaApple/></li>
+                <li onClick={toggleDropdown}><FaApple/></li>
                 <li>Finder</li>
                 <li>File</li>
                 <li>Edit</li>
@@ -38,6 +51,7 @@ const MenuBar = () => {
                 <li>HyoJin</li>
                 <li><FaSearch/></li>
             </Ul>
+
         </Header>
     );
 };

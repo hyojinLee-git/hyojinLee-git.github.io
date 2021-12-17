@@ -4,6 +4,7 @@ import MenuBar from '../components/MenuBar';
 import styled from '@emotion/styled';
 import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import {FaRegFolder} from 'react-icons/fa'
+import Dropdown from '../components/Dropdown';
 
 const StyledMain=styled.div`
     position: absolute;
@@ -33,15 +34,25 @@ const Ul=styled.ul`
 
 const Main = () => {
     const [openContent,setOpenContent]=useState(false)
+    const [showDropdown,setShowDropdown]=useState(false)
+
     const onClickOpenContent=useCallback(()=>{
         setOpenContent(true)
     },[])
     const onCloseContent=useCallback(()=>{
         setOpenContent(false)
     },[])
+
+    const toggleDropdown=()=>{
+        setShowDropdown(prev=>!prev)
+    }
     return (
         <>
-            <MenuBar/>
+            <MenuBar 
+                toggleDropdown={toggleDropdown} 
+                showDropdown={showDropdown}
+            />
+            { showDropdown && <Dropdown/>}
             <StyledMain>
                 <Ul>
                     <li>
