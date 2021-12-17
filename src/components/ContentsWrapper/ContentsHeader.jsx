@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
+import {MdClose} from 'react-icons/md'
 const Header=styled.div`
     background-color: white;
     border-radius: 20px;
@@ -20,13 +20,16 @@ const Li=styled.li`
     height: 16px;
     background-color: ${props=>props.backgroundColor};
     margin-right: 10px;
+    cursor: pointer;
 
 `
 const ContentsHeader = ({onCloseContent}) => {
     return (
         <Header>
             <Ul>
-                <Li onClick={onCloseContent} backgroundColor="#FF0000"></Li>
+                <Li onClick={onCloseContent} backgroundColor="#FF0000">
+                    <MdClose/>
+                </Li>
                 <Li backgroundColor="#F4C24D"></Li>
                 <Li backgroundColor="#65C557"></Li>
             </Ul>
