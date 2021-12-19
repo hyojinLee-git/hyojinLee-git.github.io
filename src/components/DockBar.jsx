@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import {SiNotion} from 'react-icons/si'
+import {FaGithub} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const StyledDockBar=styled.div`
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     margin-top: 20px;
     display: flex;
     left: 50%;
@@ -12,6 +15,7 @@ const StyledDockBar=styled.div`
     border-radius: 20px;
     height: 10%;
     width: 80%;
+    max-width: 1200px;
 `
 
 const Ul=styled.ul`
@@ -23,6 +27,9 @@ const Ul=styled.ul`
     width: 100%;
     & img{
         width: 64px;
+    }
+    & a{
+        color:black
     }
 `
 
@@ -38,10 +45,13 @@ const DockBar = () => {
                 <li>이력서</li>
                 <li>뭐하지</li>
                 <li>
-                    <img src="/images/notion_logo.png" alt="notion"/>
+                    {/* <img src="/images/notion_logo.png" alt="notion"/> */}
+                    <SiNotion size={64}/>
                 </li>
                 <li>tech stack</li>
-                <li>github</li>
+                <li>
+                    <Link to="https://github.com/hyojinLee-git" target="_blank"><FaGithub size={64}/></Link>
+                </li>
                 <li>trash</li>
             </Ul>
         </StyledDockBar>

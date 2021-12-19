@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useContent } from '../../context/ContentContext';
 import styled from '@emotion/styled';
 import ReactMarkdown from 'react-markdown'
-import source from '../../db/posts/seoul-garosu.md';
+import seoul_garosu from '../../db/posts/seoul-garosu.md';
+import report_generator from '../../db/posts/report-generator.md'
 
 const StyledContentsBody=styled.div`
     padding: 16px;
@@ -12,23 +14,14 @@ const StyledContentsBody=styled.div`
     height: 90%;
 `
 
+const contentsList={
+    'seoul_garosu':seoul_garosu,
+    'report_generator':report_generator
+}
+
 const markdown=`
 
-# h1
-
-**thick**
-
-text
-
-\`\`\`
-code block
-\`\`\`
-
-*기울이기*
-
-글자 \`배경색\`
-
->quote
+# Not found
 
 `
 
@@ -43,12 +36,17 @@ const InlineCodeblock=(children)=>{
 
 const ContentsBody = () => {
     const [post,setPost]=useState(markdown)
+    const state=useContent();
+
     useEffect(()=>{
-        fetch(source)
+        if (!contentsList[state]) return
+
+        fetch(contentsList[state])
         .then(res=>res.text())
         .then(post=>setPost(post))
         .catch(err=>console.log(err))
-    },[])
+    },[state])
+
     return (
         <StyledContentsBody>
             <ReactMarkdown

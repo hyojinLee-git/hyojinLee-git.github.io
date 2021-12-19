@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import DockBar from '../components/DockBar';
 import MenuBar from '../components/MenuBar';
 import styled from '@emotion/styled';
 import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import {FaRegFolder} from 'react-icons/fa'
 import Dropdown from '../components/Dropdown';
+import {useContent,useContentDispatch, usePost} from '../context/ContentContext'
 
 const StyledMain=styled.div`
     position: absolute;
@@ -12,15 +13,21 @@ const StyledMain=styled.div`
     height: 80%;
     box-sizing: border-box;
     right: 0;
+    display: flex;
+
 `
 const Ul=styled.ul`
     list-style: none;
     padding:0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
     &>li{
         display: flex;
         flex-direction: column;
         margin-bottom: 10%;
         align-items: center;
+        cursor: pointer;
         
         &>img{
         box-sizing: border-box;
@@ -32,20 +39,52 @@ const Ul=styled.ul`
     
 `
 
+const projects=[
+    {
+        name:'new_project',
+        title:'New Project',
+        icon:'/images/folder.png',
+    },
+    {
+        name:'seoul_garosu',
+        title:'서울 가로수',
+        icon:'/images/Component223.png',
+
+    },
+    {
+        name:'report_generator',
+        title:'Report Generator',
+        icon:'/images/python.png',
+    },
+    {
+        name:'portfolio',
+        title:'Portfolio',
+        icon:'',
+    },
+ 
+]
+
 const Main = () => {
     const [openContent,setOpenContent]=useState(false)
     const [showDropdown,setShowDropdown]=useState(false)
+    const dispatch=useContentDispatch()
 
-    const onClickOpenContent=useCallback(()=>{
+
+    const onClickOpenContent=useCallback((e)=>{
+        const id=e.target.id
+        dispatch({
+            type:'GET_CONTENT',
+            id
+        })
         setOpenContent(true)
-    },[])
+    },[dispatch])
     const onCloseContent=useCallback(()=>{
         setOpenContent(false)
     },[])
 
-    const toggleDropdown=()=>{
+    const toggleDropdown=useCallback(()=>{
         setShowDropdown(prev=>!prev)
-    }
+    },[])
     return (
         <>
             <MenuBar 
@@ -55,14 +94,42 @@ const Main = () => {
             { showDropdown && <Dropdown/>}
             <StyledMain>
                 <Ul>
-                    <li>
+                    {
+                        projects.map(project=>(
+                            <li key={project.name} id={project.name} onClick={onClickOpenContent}>
+                                <img src={project.icon} alt={project.name} id={project.name}/>
+                                {project.title}
+                            </li>
+                        ))
+                    }
+                    {/* <li>
                         <FaRegFolder size={64}/>
-                        New Folder
+                        New Project
                     </li>
                     <li onClick={onClickOpenContent}>
                         <img src="/images/Component223.png" alt="seoul-garosu"/>
                         서울가로수
                     </li>
+                    <li onClick={onClickOpenContent}>
+                        <FaRegFolder size={64}/>
+                        CaptureMe
+                    </li>
+                    <li onClick={onClickOpenContent}>
+                        <FaRegFolder size={64}/>
+                        Report Generator
+                    </li>
+                    <li onClick={onClickOpenContent}>
+                        <FaRegFolder size={64}/>
+                        Report Generator
+                    </li>
+                    <li onClick={onClickOpenContent}>
+                        <FaRegFolder size={64}/>
+                        Report Generator
+                    </li>
+                    <li onClick={onClickOpenContent}>
+                        <FaRegFolder size={64}/>
+                        Report Generator
+                    </li> */}
                 </Ul>
                 
             </StyledMain>

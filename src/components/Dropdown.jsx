@@ -12,7 +12,7 @@ const DropdownContainer=styled.div`
     border:1px solid;
     border-top:none;
     box-sizing: border-box;
-
+    z-index: 999;
 `
 
 const Ul=styled.ul`
@@ -21,6 +21,7 @@ const Ul=styled.ul`
     margin:0
 `
 const Li=styled.li`
+    cursor: pointer;
     &:hover{
         background-color: skyblue;
     }
@@ -30,9 +31,11 @@ const menuItems=[
     'About This Mac',
     'System Preferences',
     'App Store',
+    '--------------------',
     'Sleep',
     'Restart',
     'Shut Down',
+    '--------------------',
     'Lock Screen',
     'Log Out HyoJin'
 ]
