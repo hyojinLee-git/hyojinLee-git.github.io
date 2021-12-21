@@ -5,6 +5,7 @@ const DropdownContainer=styled.div`
     position: absolute;
     left: 15px;
     top: 5%;
+    
     background-color: white;
     padding:5px 10px;
     border-radius: 5px;
@@ -13,6 +14,7 @@ const DropdownContainer=styled.div`
     border-top:none;
     box-sizing: border-box;
     z-index: 999;
+    
 `
 
 const Ul=styled.ul`
