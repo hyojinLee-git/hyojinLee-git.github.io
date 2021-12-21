@@ -9,6 +9,7 @@ const Header=styled.header`
  align-items: center;
  background-color: white;
  height: 5%;
+ max-height: 2rem;
  border:1px solid;
  box-sizing: border-box;
 `

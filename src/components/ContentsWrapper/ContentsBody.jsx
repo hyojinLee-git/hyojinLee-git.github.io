@@ -10,8 +10,11 @@ const StyledContentsBody=styled.div`
     padding-top: 0;
     overflow: auto;
     position: relative;
+    /* border:1px solid red; */
+    margin-left:10%;
+    margin-top:3%;
     /* 왜 박스 바깥으로 나가는거지? */
-    height: 90%;
+    height: 85%;
 `
 
 const contentsList={
@@ -21,7 +24,7 @@ const contentsList={
 
 const markdown=`
 
-# Not found
+# 어떤 프로젝트를 해볼까요?
 
 `
 
@@ -49,16 +52,18 @@ const ContentsBody = () => {
 
     return (
         <StyledContentsBody>
-            <ReactMarkdown
-                children={post}
-                components={{
-                    inlineCode:InlineCodeblock,
-                    // code:InlineCodeblock
-                }}
-            >
-                {/* {markdown} */}
-                
-            </ReactMarkdown>
+            <div style={{width:"80%"}}>
+                <ReactMarkdown
+                    children={post}
+                    components={{
+                        inlineCode:InlineCodeblock,
+                        // code:InlineCodeblock
+                    }}
+                >
+                    {/* {markdown} */}
+                    
+                </ReactMarkdown>
+                </div>
         </StyledContentsBody>
     );
 };

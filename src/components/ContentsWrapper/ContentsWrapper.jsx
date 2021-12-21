@@ -12,6 +12,7 @@ const StyledContentsWrapper=styled.div`
     margin-top:16px;
     padding: 16px;
     box-sizing: border-box;
+    padding-right: 0;
 
 `
 

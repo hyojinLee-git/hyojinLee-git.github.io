@@ -19,6 +19,7 @@ const Button=styled.button`
 const Enter = () => {
     return (
         <StlyedComponent>
+            
             <Button>
                 <Link to="/main">enter</Link>
             </Button>

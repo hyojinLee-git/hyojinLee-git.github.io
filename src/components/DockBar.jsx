@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {SiNotion} from 'react-icons/si'
-import {FaGithub} from 'react-icons/fa'
-import { Link } from 'react-router-dom';
+import {FaGithub,FaTrash,FaUser,FaUserPlus,FaTools,FaPlayCircle} from 'react-icons/fa'
+import { ExternalLink } from 'react-external-link';
+import {VscTools} from 'react-icons/vsc'
 
 const StyledDockBar=styled.div`
     position: absolute;
@@ -15,7 +16,8 @@ const StyledDockBar=styled.div`
     border-radius: 20px;
     height: 10%;
     width: 80%;
-    max-width: 1200px;
+    max-width: 1000px;
+    padding: 5px 10px;
 `
 
 const Ul=styled.ul`
@@ -25,8 +27,12 @@ const Ul=styled.ul`
     padding: 0;
     justify-content: space-around;
     width: 100%;
+    &> li{
+        position: relative;
+    }
     & img{
         width: 64px;
+        /* width: 70%; */
     }
     & a{
         color:black
@@ -42,17 +48,32 @@ const DockBar = () => {
     return (
         <StyledDockBar>
             <Ul>
-                <li>이력서</li>
-                <li>뭐하지</li>
+                <li>
+                    <img src="/images/resume2.png" alt="resume"/>
+                    <br/>
+                    고민
+
+                </li>
+                <li>
+                    <FaPlayCircle size={64}/>
+                    <br/>
+                    뭐하지
+                </li>
                 <li>
                     {/* <img src="/images/notion_logo.png" alt="notion"/> */}
                     <SiNotion size={64}/>
                 </li>
-                <li>tech stack</li>
                 <li>
-                    <Link to="https://github.com/hyojinLee-git" target="_blank"><FaGithub size={64}/></Link>
+                    <VscTools size={64}/><br/> 여기도고민
                 </li>
-                <li>trash</li>
+                <li>
+                    <ExternalLink href="https://github.com/hyojinLee-git">
+                        <FaGithub size={64}/>
+                    </ExternalLink>
+                </li>
+                <li>
+                    <FaTrash size={64}/>
+                </li>
             </Ul>
         </StyledDockBar>
     );
