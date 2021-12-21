@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from '@emotion/styled'
+import React from 'react';
+import styled from 'styled-components'
 import {FaApple,FaSearch,FaWifi} from 'react-icons/fa'
 
 
