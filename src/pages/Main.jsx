@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import {FaRegFolder} from 'react-icons/fa'
 import Dropdown from '../components/Dropdown';
-import {useContent,useContentDispatch, usePost} from '../context/ContentContext'
+import {useContentDispatch} from '../context/ContentContext'
 
 const StyledMain=styled.div`
     position: absolute;
