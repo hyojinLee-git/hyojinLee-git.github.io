@@ -17,7 +17,7 @@ const Header=styled.header`
 const Ul=styled.ul`
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
+    margin:0;
     padding:0;
     list-style: none;
     &>li{
