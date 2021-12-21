@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {MdClose} from 'react-icons/md'
 const Header=styled.div`
     background-color: white;

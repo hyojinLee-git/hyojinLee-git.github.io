@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {SiNotion} from 'react-icons/si'
 import {FaGithub,FaTrash,FaUser,FaUserPlus,FaTools,FaPlayCircle} from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link';

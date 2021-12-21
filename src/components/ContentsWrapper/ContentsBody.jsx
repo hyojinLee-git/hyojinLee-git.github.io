@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useContent } from '../../context/ContentContext';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown'
 import seoul_garosu from '../../db/posts/seoul-garosu.md';
 import report_generator from '../../db/posts/report-generator.md'

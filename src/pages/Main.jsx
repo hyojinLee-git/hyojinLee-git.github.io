@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useState } from 'react';
 import DockBar from '../components/DockBar';
 import MenuBar from '../components/MenuBar';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import {FaRegFolder} from 'react-icons/fa'
 import Dropdown from '../components/Dropdown';
