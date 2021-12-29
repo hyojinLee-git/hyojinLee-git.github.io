@@ -34,7 +34,7 @@ const Ul=styled.ul`
     
 `
 
-const MenuBar = ({showDropdown,toggleDropdown}) => {
+const MenuBar = ({toggleDropdown}) => {
     return (
         <Header>
             <Ul>
@@ -57,4 +57,4 @@ const MenuBar = ({showDropdown,toggleDropdown}) => {
     );
 };
 
-export default MenuBar;
+export default React.memo(MenuBar);

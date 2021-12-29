@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {SiNotion} from 'react-icons/si'
-import {FaGithub,FaTrash,FaUser,FaUserPlus,FaTools,FaPlayCircle} from 'react-icons/fa'
+import {FaGithub,FaTrash, FaTools,FaPlayCircle} from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link';
-import {VscTools} from 'react-icons/vsc'
 
 const StyledDockBar=styled.div`
     position: absolute;
@@ -50,21 +49,19 @@ const DockBar = () => {
             <Ul>
                 <li>
                     <img src="/images/resume2.png" alt="resume"/>
-                    <br/>
-                    고민
+                    
 
                 </li>
                 <li>
                     <FaPlayCircle size={64}/>
-                    <br/>
-                    뭐하지
+                    
                 </li>
                 <li>
                     {/* <img src="/images/notion_logo.png" alt="notion"/> */}
                     <SiNotion size={64}/>
                 </li>
                 <li>
-                    <VscTools size={64}/><br/> 여기도고민
+                    <FaTools size={64}/>
                 </li>
                 <li>
                     <ExternalLink href="https://github.com/hyojinLee-git">
@@ -79,4 +76,4 @@ const DockBar = () => {
     );
 };
 
-export default DockBar;
+export default React.memo(DockBar);

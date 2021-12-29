@@ -23,7 +23,7 @@
 
 ## 서비스 플로우 차트
 
-<!-- ![flowchart](/images/markdown/seoul_garosu_flowchart.png) -->
+![flowchart](/images/markdown/seoul_garosu_flowchart.png)
 
 ## 기여한 부분
 

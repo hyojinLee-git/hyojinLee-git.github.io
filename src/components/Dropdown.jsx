@@ -62,4 +62,4 @@ const Dropdown = () => {
     );
 };
 
-export default Dropdown;
+export default React.memo(Dropdown);

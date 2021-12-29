@@ -29,6 +29,16 @@ const ContentsBody = () => {
     const [post,setPost]=useState('')
     const state=useContent();
 
+    const renderers = {
+        img: ({alt,src}) => (
+            <img 
+                alt={alt} 
+                src={src} 
+                style={{ maxWidth: "100%" }}  />
+        ),
+        
+    };
+
     useEffect(()=>{
         if (!contentsList[state]) return
         setLoading(true)
@@ -44,7 +54,11 @@ const ContentsBody = () => {
     return (
         <StyledContentsBody>
             <div style={{width:"80%"}}>
-                <ReactMarkdown children={post}/>
+                <ReactMarkdown 
+
+                    children={post}
+                    components={renderers}
+                />
                 {loading && <div>로딩중</div>}
                 {error && <div>Not Found</div>}
             </div>
