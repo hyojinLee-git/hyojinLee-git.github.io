@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import seoul_garosu from '../../db/posts/seoul-garosu.md';
 import report_generator from '../../db/posts/report-generator.md'
 import new_project from '../../db/posts/new-project.md'
+import captureme from '../../db/posts/captureme.md'
 
 const StyledContentsBody=styled.div`
     padding: 16px;
@@ -20,14 +21,22 @@ const StyledContentsBody=styled.div`
 const contentsList={
     'new_project':new_project,
     'seoul_garosu':seoul_garosu,
-    'report_generator':report_generator
+    'report_generator':report_generator,
+    'captureMe':captureme
 }
+
+const initialMarkdown=`
+    # 어떤 프로젝트를 해볼까요?
+`
 
 const ContentsBody = () => {
     const [loading,setLoading]=useState(false);
     const[error,setError]=useState(false)
     const [post,setPost]=useState('')
     const state=useContent();
+
+    //console.log(state)
+    //네번이나 렌더링된다규..?
 
     const renderers = {
         img: ({alt,src}) => (

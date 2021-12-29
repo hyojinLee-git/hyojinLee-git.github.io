@@ -60,6 +60,11 @@ const projects=[
         title:'Portfolio',
         icon:'',
     },
+    {
+        name:'captureMe',
+        title:'CaptureMe',
+        icon:''
+    }
  
 ]
 
