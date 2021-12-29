@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import {SiNotion} from 'react-icons/si'
 import {FaGithub,FaTrash, FaTools,FaPlayCircle} from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link';
+import {useContentDispatch} from '../context/ContentContext'
 
 const StyledDockBar=styled.div`
     position: absolute;
@@ -28,6 +29,7 @@ const Ul=styled.ul`
     width: 100%;
     &> li{
         position: relative;
+        cursor: pointer;
     }
     & img{
         width: 64px;
@@ -43,25 +45,25 @@ const Ul=styled.ul`
 // `
 
 
-const DockBar = () => {
+const DockBar = ({onClickOpenContent}) => {
+
     return (
         <StyledDockBar>
             <Ul>
-                <li>
-                    <img src="/images/resume2.png" alt="resume"/>
-                    
+                <li onClick={onClickOpenContent}>
+                
+                     <img src="/images/resume2.png" alt="resume" id="resume"/>
+ 
 
                 </li>
                 <li>
                     <FaPlayCircle size={64}/>
-                    
                 </li>
                 <li>
-                    {/* <img src="/images/notion_logo.png" alt="notion"/> */}
                     <SiNotion size={64}/>
                 </li>
-                <li>
-                    <FaTools size={64}/>
+                <li onClick={onClickOpenContent} id="tech-stack">
+                    <FaTools size={64} id="tech-stack"/>
                 </li>
                 <li>
                     <ExternalLink href="https://github.com/hyojinLee-git">

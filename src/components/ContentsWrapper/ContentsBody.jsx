@@ -6,6 +6,9 @@ import seoul_garosu from '../../db/posts/seoul-garosu.md';
 import report_generator from '../../db/posts/report-generator.md'
 import new_project from '../../db/posts/new-project.md'
 import captureme from '../../db/posts/captureme.md'
+import tech_stack from '../../db/posts/tech-stack.md'
+import resume from '../../db/posts/resume.md'
+
 
 const StyledContentsBody=styled.div`
     padding: 16px;
@@ -19,14 +22,15 @@ const StyledContentsBody=styled.div`
 `
 
 const contentsList={
-    'new_project':new_project,
     'seoul_garosu':seoul_garosu,
     'report_generator':report_generator,
-    'captureMe':captureme
+    'captureMe':captureme,
+    'tech-stack':tech_stack,
+    'resume':resume
 }
 
 const initialMarkdown=`
-    # 어떤 프로젝트를 해볼까요?
+    # 어떤 프로젝트를 만들어볼까요?
 `
 
 const ContentsBody = () => {
@@ -40,17 +44,22 @@ const ContentsBody = () => {
 
     const renderers = {
         img: ({alt,src}) => (
-            <img 
-                alt={alt} 
-                src={src} 
-                style={{ maxWidth: "100%" }}  />
+                <img 
+                    alt={alt} 
+                    src={src} 
+                    style={{ maxWidth: "100%" }}  />
         ),
         
     };
 
     useEffect(()=>{
-        if (!contentsList[state]) return
+
         setLoading(true)
+        if (!contentsList[state]) {
+            setPost(initialMarkdown)
+            setLoading(false)
+            return
+        }
         fetch(contentsList[state])
         .then(res=>res.text())
         .then(post=>{
@@ -64,10 +73,10 @@ const ContentsBody = () => {
         <StyledContentsBody>
             <div style={{width:"80%"}}>
                 <ReactMarkdown 
-
                     children={post}
                     components={renderers}
                 />
+
                 {loading && <div>로딩중</div>}
                 {error && <div>Not Found</div>}
             </div>

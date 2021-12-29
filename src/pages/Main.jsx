@@ -106,39 +106,11 @@ const Main = () => {
                             </li>
                         ))
                     }
-                    {/* <li>
-                        <FaRegFolder size={64}/>
-                        New Project
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <img src="/images/Component223.png" alt="seoul-garosu"/>
-                        서울가로수
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <FaRegFolder size={64}/>
-                        CaptureMe
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <FaRegFolder size={64}/>
-                        Report Generator
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <FaRegFolder size={64}/>
-                        Report Generator
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <FaRegFolder size={64}/>
-                        Report Generator
-                    </li>
-                    <li onClick={onClickOpenContent}>
-                        <FaRegFolder size={64}/>
-                        Report Generator
-                    </li> */}
                 </Ul>
                 
             </StyledMain>
             { openContent && <ContentsWrapper onCloseContent={onCloseContent}/>}
-            <DockBar/>
+            <DockBar onClickOpenContent={onClickOpenContent}/>
         </>
     );
 };
