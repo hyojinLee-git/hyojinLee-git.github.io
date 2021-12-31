@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import {FaApple,FaSearch,FaWifi} from 'react-icons/fa'
 
@@ -23,18 +23,42 @@ const Ul=styled.ul`
     &>li{
         margin-left: 15px;
         cursor: pointer;
-        padding:1px 5px
+        padding:1px 5px;
+        border-radius: 3px;
     }
     &:last-child{
         margin-right: 15px;
     }
     &>li:hover{
-        background-color: skyblue;
+        background-color: #E5E5E5;
+        box-shadow:1px 1px 3px black;
+        transform: translate(-1px,-1px);
     }
     
 `
 
 const MenuBar = ({toggleDropdown}) => {
+    const today=new Date();
+    const [time,setTime]=useState({
+        hour:today.getHours(),
+        min:today.getMinutes(),
+        sec:today.getSeconds()
+    })
+
+    useEffect(()=>{
+        let interval=time.sec===0? 60000:(60-time.sec)*1000
+        const timer=setInterval(()=>{
+            const today=new Date()
+            setTime({
+                ...time,
+                hour:today.getHours(),
+                min:today.getMinutes(),
+                sec:today.getSeconds()
+            })
+        },interval)     
+        return ()=>{ clearInterval(timer)}
+    },[time])
+
     return (
         <Header>
             <Ul>
@@ -48,7 +72,9 @@ const MenuBar = ({toggleDropdown}) => {
             </Ul>
             <Ul>
                 <li><FaWifi/></li>
-                <li>2:22 AM</li>
+                <li>{ `
+                ${time.hour>12? time.hour-12:time.hour}:${time.min>=10?time.min:`0${time.min}`}
+                ${time.hour>=12?'PM':'AM'}` }</li>
                 <li>HyoJin</li>
                 <li><FaSearch/></li>
             </Ul>

@@ -49,6 +49,12 @@ const ContentsBody = () => {
                     src={src} 
                     style={{ maxWidth: "100%" }}  />
         ),
+        a:(props)=>(
+            <a {...props} style={{color:'#9B9A97'}}/>
+        ),
+        // h2:(props)=>(
+        //     <h2 {...props} style={{color:'orange'}} />
+        // )
         
     };
 

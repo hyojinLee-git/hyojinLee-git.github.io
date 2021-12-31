@@ -24,7 +24,6 @@ GitHub. [https://github.com/hyojinLee-git](https://github.com/hyojinLee-git)
 
 [🔗[github-web](https://github.com/hyojinLee-git/garosugil)]
 
-- 사용기술: React, Android Studio, Firebase
 - 나무돌보미 신청 페이지 제작
 - 나무 돌보미 설명 및 나무 돌봄 팁 페이지 제작
 - 데이터 시각화 페이지 제작
