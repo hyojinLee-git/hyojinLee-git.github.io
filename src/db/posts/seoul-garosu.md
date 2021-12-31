@@ -5,6 +5,7 @@
 ## 서비스 개요
 
 나만의 가로수를 입양하여 관리할 수 있는 앱입니다.
+
 ![screenshot](/images/markdown/seoul_garosu_screenshot.png)
 
 ## 사용 기술

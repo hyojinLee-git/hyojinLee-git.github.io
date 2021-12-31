@@ -19,13 +19,13 @@ const Button=styled.button`
     border:none;
     background:#CDACD9;
     border-radius: 20px;
-    box-shadow: 13px 15px #6F4376;
+    box-shadow: 10px 12px #6F4376;
     cursor: pointer;
     font-size: 3rem;
     margin-top: 30px;
     &:active{
-        transform: translate(11px, 11px);
-        box-shadow: 2px 4px #6F4376;
+        transform: translate(5px, 5px);
+        box-shadow: 5px 7px #6F4376;
 
     }
 `
@@ -35,6 +35,7 @@ const Profile=styled.div`
     height: 30vh;
     border-radius: 50%;
     background-position: center;
+    background-size: 'cover';
 
 `
 const Name=styled.div`

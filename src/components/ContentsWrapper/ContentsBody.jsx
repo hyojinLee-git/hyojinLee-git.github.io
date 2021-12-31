@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown'
 import seoul_garosu from '../../db/posts/seoul-garosu.md';
 import report_generator from '../../db/posts/report-generator.md'
-import new_project from '../../db/posts/new-project.md'
 import captureme from '../../db/posts/captureme.md'
 import tech_stack from '../../db/posts/tech-stack.md'
 import resume from '../../db/posts/resume.md'
@@ -50,11 +49,9 @@ const ContentsBody = () => {
                     style={{ maxWidth: "100%" }}  />
         ),
         a:(props)=>(
+            // eslint-disable-next-line jsx-a11y/anchor-has-content
             <a {...props} style={{color:'#9B9A97'}}/>
         ),
-        // h2:(props)=>(
-        //     <h2 {...props} style={{color:'orange'}} />
-        // )
         
     };
 

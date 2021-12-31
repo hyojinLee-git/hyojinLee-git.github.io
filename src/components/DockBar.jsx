@@ -1,9 +1,8 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {SiNotion} from 'react-icons/si'
-import {FaGithub,FaTrash, FaTools,FaPlayCircle} from 'react-icons/fa'
+import {FaGithub,FaTrash, FaTools} from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link';
-import {useContentDispatch} from '../context/ContentContext'
 
 const StyledDockBar=styled.div`
     position: absolute;
@@ -33,16 +32,11 @@ const Ul=styled.ul`
     }
     & img{
         width: 64px;
-        /* width: 70%; */
     }
     & a{
         color:black
     }
 `
-
-// const Li=styled.li`
-//     margin-right: 10px;
-// `
 
 
 const DockBar = ({onClickOpenContent}) => {
@@ -51,10 +45,7 @@ const DockBar = ({onClickOpenContent}) => {
         <StyledDockBar>
             <Ul>
                 <li onClick={onClickOpenContent} id="resume">
-                
-                     <img src="/images/resume2.png" alt="resume"/>
- 
-
+                    <img src="/images/resume2.png" alt="resume"/>
                 </li>
                 <li>
                     <ExternalLink 
