@@ -20,9 +20,7 @@ GitHub. [https://github.com/hyojinLee-git](https://github.com/hyojinLee-git)
 
 나무돌보미 사업 활성화를 위한 하이브리드 애플리케이션입니다.
 
-[🔗[github](https://github.com/bobaejeon/garosero)]
-
-[🔗[github-web](https://github.com/hyojinLee-git/garosugil)]
+[🔗[github](https://github.com/bobaejeon/garosero)] [🔗[github-web](https://github.com/hyojinLee-git/garosugil)]
 
 - 나무돌보미 신청 페이지 제작
 - 나무 돌보미 설명 및 나무 돌봄 팁 페이지 제작

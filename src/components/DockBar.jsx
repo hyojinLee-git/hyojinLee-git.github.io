@@ -50,9 +50,9 @@ const DockBar = ({onClickOpenContent}) => {
     return (
         <StyledDockBar>
             <Ul>
-                <li onClick={onClickOpenContent}>
+                <li onClick={onClickOpenContent} id="resume">
                 
-                     <img src="/images/resume2.png" alt="resume" id="resume"/>
+                     <img src="/images/resume2.png" alt="resume"/>
  
 
                 </li>
@@ -65,7 +65,7 @@ const DockBar = ({onClickOpenContent}) => {
                     
                 </li>
                 <li onClick={onClickOpenContent} id="tech-stack">
-                    <FaTools size={64} id="tech-stack"/>
+                    <FaTools size={64}/>
                 </li>
                 <li>
                     <ExternalLink href="https://github.com/hyojinLee-git">

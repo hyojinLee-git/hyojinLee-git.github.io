@@ -55,11 +55,7 @@ const projects=[
         title:'Report Generator',
         icon:'/images/python.png',
     },
-    {
-        name:'portfolio',
-        title:'Portfolio',
-        icon:'',
-    },
+
     {
         name:'captureMe',
         title:'CaptureMe',
@@ -75,7 +71,9 @@ const Main = () => {
 
 
     const onClickOpenContent=useCallback((e)=>{
-        const id=e.target.id
+        const id=e.currentTarget.id
+        //console.log(e.target)
+        //console.log(e.currentTarget.id)
         dispatch({
             type:'GET_CONTENT',
             id
@@ -101,7 +99,7 @@ const Main = () => {
                     {
                         projects.map(project=>(
                             <li key={project.name} id={project.name} onClick={onClickOpenContent}>
-                                <img src={project.icon} alt={project.name} id={project.name}/>
+                                <img src={project.icon} alt={project.name}/>
                                 {project.title}
                             </li>
                         ))
