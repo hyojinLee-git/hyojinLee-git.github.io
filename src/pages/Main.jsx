@@ -59,7 +59,7 @@ const projects=[
     {
         name:'captureMe',
         title:'CaptureMe',
-        icon:''
+        icon:'/images/captureme_logo.png'
     }
  
 ]
