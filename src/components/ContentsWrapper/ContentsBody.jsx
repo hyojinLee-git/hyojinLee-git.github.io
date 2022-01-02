@@ -50,7 +50,7 @@ const ContentsBody = () => {
         ),
         a:(props)=>(
             // eslint-disable-next-line jsx-a11y/anchor-has-content
-            <a {...props} style={{color:'#9B9A97'}}/>
+            <a {...props} style={{color:'#757573'}}/>
         ),
         
     };

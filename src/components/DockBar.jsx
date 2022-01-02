@@ -26,9 +26,12 @@ const Ul=styled.ul`
     padding: 0;
     justify-content: space-between;
     width: 100%;
-    &> li{
+    & button{
         position: relative;
         cursor: pointer;
+        background: none;
+        border:none;
+        outline: none;
     }
     & img{
         width: 64px;
@@ -45,7 +48,9 @@ const DockBar = ({onClickOpenContent}) => {
         <StyledDockBar>
             <Ul>
                 <li onClick={onClickOpenContent} id="resume">
-                    <img src="/images/resume2.png" alt="resume"/>
+                    <button>
+                        <img src="/images/resume.png" alt="resume"/>
+                    </button>
                 </li>
                 <li>
                     <ExternalLink 
@@ -53,10 +58,11 @@ const DockBar = ({onClickOpenContent}) => {
                     >
                         <SiNotion size={64}/>
                     </ExternalLink>
-                    
                 </li>
                 <li onClick={onClickOpenContent} id="tech-stack">
-                    <FaTools size={64}/>
+                    <button>
+                        <FaTools size={64}/>
+                    </button>
                 </li>
                 <li>
                     <ExternalLink href="https://github.com/hyojinLee-git">

@@ -6,10 +6,10 @@ import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import Dropdown from '../components/Dropdown';
 import {useContentDispatch} from '../context/ContentContext'
 
+
 const StyledMain=styled.div`
     position: absolute;
     margin: 16px;
-    height: 80%;
     box-sizing: border-box;
     right: 0;
     display: flex;
@@ -21,14 +21,18 @@ const Ul=styled.ul`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
-    &>li{
+    & button{
         display: flex;
         flex-direction: column;
         margin-bottom: 10%;
         align-items: center;
         cursor: pointer;
+        background: none;
+        outline: none;
+        width: 85px;
+        border:none;
         
-        &>img{
+        & img{
         box-sizing: border-box;
         width: 64px;
        
@@ -67,13 +71,14 @@ const projects=[
 const Main = () => {
     const [openContent,setOpenContent]=useState(false)
     const [showDropdown,setShowDropdown]=useState(false)
+
     const dispatch=useContentDispatch()
 
 
     const onClickOpenContent=useCallback((e)=>{
         const id=e.currentTarget.id
-        //console.log(e.target)
-        //console.log(e.currentTarget.id)
+        console.log(id)
+        console.log(e.target)
         dispatch({
             type:'GET_CONTENT',
             id
@@ -87,20 +92,25 @@ const Main = () => {
     const toggleDropdown=useCallback(()=>{
         setShowDropdown(prev=>!prev)
     },[])
+
+
     return (
         <>
             <MenuBar 
                 toggleDropdown={toggleDropdown} 
-                showDropdown={showDropdown}
             />
             { showDropdown && <Dropdown/>}
+
             <StyledMain>
                 <Ul>
                     {
                         projects.map(project=>(
                             <li key={project.name} id={project.name} onClick={onClickOpenContent}>
-                                <img src={project.icon} alt={project.name}/>
-                                {project.title}
+                                <button onClick={onClickOpenContent}>                                
+                                    <img src={project.icon} alt={project.name}/>
+                                    {project.title}
+                                </button>
+
                             </li>
                         ))
                     }
