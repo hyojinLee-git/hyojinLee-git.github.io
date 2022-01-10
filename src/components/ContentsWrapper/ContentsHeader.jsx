@@ -32,14 +32,24 @@ const Li=styled.li`
     &:hover{
         &>*{opacity:1;}
     }
+    &>button{
+        border:none;
+        background:none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
 `
 const ContentsHeader = ({onCloseContent}) => {
     return (
         <Header>
             <Ul>
-                <Li onClick={onCloseContent} backgroundColor="#FF0000">
-                    <MdClose color='#483c30'/>
+                <Li backgroundColor="#FF0000">
+                    <button onClick={onCloseContent}>
+                        <MdClose color='#483c30'/>
+                    </button>
                 </Li>
                 <Li backgroundColor="#F4C24D">
                     <MdMinimize color='#483c30'/>

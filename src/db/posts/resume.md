@@ -6,8 +6,6 @@
 
 Email. splato8899@gmail.com
 
-Phone. **010-3456-2353**
-
 GitHub. [https://github.com/hyojinLee-git](https://github.com/hyojinLee-git)
 
 ---

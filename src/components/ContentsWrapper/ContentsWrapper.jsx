@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ContentsHeader from './ContentsHeader';
 import ContentsBody from './ContentsBody';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 const StyledContentsWrapper=styled.div`
     position: absolute;
@@ -20,7 +21,9 @@ const ContentsWrapper = ({onCloseContent}) => {
     return (
         <StyledContentsWrapper>
             <ContentsHeader onCloseContent={onCloseContent}/>
-            <ContentsBody/>
+
+                <ContentsBody/>
+
         </StyledContentsWrapper>
     );
 };

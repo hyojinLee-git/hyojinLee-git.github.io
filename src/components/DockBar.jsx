@@ -14,8 +14,9 @@ const StyledDockBar=styled.div`
     background-color: rgba(255,255,255,0.5);
     border-radius: 20px;
     height: 10%;
+    max-height: 80px;
     width: 60%;
-    max-width: 1000px;
+    max-width: 500px;
     padding: 5px 10px;
 `
 

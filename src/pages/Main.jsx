@@ -77,8 +77,6 @@ const Main = () => {
 
     const onClickOpenContent=useCallback((e)=>{
         const id=e.currentTarget.id
-        console.log(id)
-        console.log(e.target)
         dispatch({
             type:'GET_CONTENT',
             id

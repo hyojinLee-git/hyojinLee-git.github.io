@@ -2,29 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { useContent } from '../../context/ContentContext';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown'
-import seoul_garosu from '../../db/posts/seoul-garosu.md';
-import report_generator from '../../db/posts/report-generator.md'
-import captureme from '../../db/posts/captureme.md'
-import tech_stack from '../../db/posts/tech-stack.md'
+import seoulGarosu from '../../db/posts/seoul-garosu.md';
+import reportGenerator from '../../db/posts/report-generator.md'
+import captureMe from '../../db/posts/captureme.md'
+import techStack from '../../db/posts/tech-stack.md'
 import resume from '../../db/posts/resume.md'
+import { Scrollbars } from 'react-custom-scrollbars';
+
 
 
 const StyledContentsBody=styled.div`
     padding: 16px;
     padding-top: 0;
-    overflow: auto;
-    position: relative;
     margin-left:10%;
     margin-top:3%;
-    /* 왜 박스 바깥으로 나가는거지? */
-    height: 85%;
+    height: 100%;
 `
 
 const contentsList={
-    'seoul_garosu':seoul_garosu,
-    'report_generator':report_generator,
-    'captureMe':captureme,
-    'tech-stack':tech_stack,
+    'seoul_garosu':seoulGarosu,
+    'report_generator':reportGenerator,
+    'captureMe':captureMe,
+    'tech-stack':techStack,
     'resume':resume
 }
 
@@ -63,6 +62,7 @@ const ContentsBody = () => {
             setLoading(false)
             return
         }
+        
         fetch(contentsList[state])
         .then(res=>res.text())
         .then(post=>{
@@ -73,6 +73,7 @@ const ContentsBody = () => {
     },[state])
 
     return (
+       <Scrollbars style={{height:"90%"}}>
         <StyledContentsBody>
             <div style={{width:"80%"}}>
                 <ReactMarkdown 
@@ -82,8 +83,9 @@ const ContentsBody = () => {
 
                 {loading && <div>로딩중</div>}
                 {error && <div>Not Found</div>}
-            </div>
+                </div>
         </StyledContentsBody>
+     </Scrollbars>
     );
 };
 
