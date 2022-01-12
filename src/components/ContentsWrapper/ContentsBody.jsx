@@ -17,6 +17,12 @@ const StyledContentsBody=styled.div`
     margin-left:10%;
     margin-top:3%;
     height: 100%;
+    & .resume-subtitle{
+        color:#D9730D
+    }
+    & #prize{
+        width: 50%;
+    }
 `
 
 const contentsList={
@@ -41,16 +47,26 @@ const ContentsBody = () => {
     //네번이나 렌더링된다규..?
 
     const renderers = {
+        h2:(props)=>(
+            // eslint-disable-next-line jsx-a11y/heading-has-content
+            <h2 
+                {...props} 
+                className={state==='resume'? 'resume-subtitle':''}
+            />
+        ),
         img: ({alt,src}) => (
                 <img 
                     alt={alt} 
                     src={src} 
-                    style={{ maxWidth: "100%" }}  />
+                    id={state==='seoul_garosu'&& alt==='prize'?'prize':''}
+                    style={{ maxWidth: "100%" }}  
+                />
         ),
         a:(props)=>(
             // eslint-disable-next-line jsx-a11y/anchor-has-content
             <a {...props} style={{color:'#757573'}}/>
         ),
+        
         
     };
 

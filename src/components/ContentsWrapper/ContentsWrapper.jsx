@@ -20,9 +20,7 @@ const ContentsWrapper = ({onCloseContent}) => {
     return (
         <StyledContentsWrapper>
             <ContentsHeader onCloseContent={onCloseContent}/>
-
-                <ContentsBody/>
-
+            <ContentsBody/>
         </StyledContentsWrapper>
     );
 };
