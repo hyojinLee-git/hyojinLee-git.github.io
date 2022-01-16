@@ -1,50 +1,28 @@
 export default [
   {
-    id: 0,
     name: 'new_project',
     title: 'New Project',
-    icon: '',
+    icon: '/images/folder.png',
   },
   {
-    id: 1,
     name: 'seoul_garosu',
     title: '서울 가로수',
     icon: '/images/Component223.png',
   },
   {
-    id: 2,
     name: 'report_generator',
     title: 'Report Generator',
-    icon: '',
+    icon: '/images/python.png',
+  },
+
+  {
+    name: 'captureMe',
+    title: 'Capture Me',
+    icon: '/images/captureme_logo.png',
   },
   {
-    id: 3,
-    name: 'new-project',
-    title: 'New Project',
-    icon: '',
-  },
-  {
-    id: 4,
-    name: 'new-project',
-    title: 'New Project',
-    icon: '',
-  },
-  {
-    id: 5,
-    name: 'new-project',
-    title: 'New Project',
-    icon: '',
-  },
-  {
-    id: 6,
-    name: 'new-project',
-    title: 'New Project',
-    icon: '',
-  },
-  {
-    id: 7,
-    name: 'new-project',
-    title: 'New Project',
-    icon: '',
+    name: 'capstone_design',
+    title: '시각장애인을 위한 도보안내장치',
+    icon: '/images/Raspberry_Pi-Logo.png',
   },
 ];

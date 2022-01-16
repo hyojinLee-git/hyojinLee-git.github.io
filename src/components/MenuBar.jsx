@@ -22,17 +22,22 @@ const Ul=styled.ul`
     list-style: none;
     &>li{
         margin-left: 15px;
-        cursor: pointer;
         padding:1px 5px;
-        border-radius: 3px;
+        &>button{
+            background: none;
+            border:none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        &>button:hover{
+            background-color: #E5E5E5;
+            box-shadow:1px 1px 3px black;
+            transform: translate(-1px,-1px);
+        }
     }
     &:last-child{
         margin-right: 15px;
-    }
-    &>li:hover{
-        background-color: #E5E5E5;
-        box-shadow:1px 1px 3px black;
-        transform: translate(-1px,-1px);
     }
     
 `
@@ -62,7 +67,11 @@ const MenuBar = ({toggleDropdown}) => {
     return (
         <Header>
             <Ul>
-                <li onClick={toggleDropdown}><FaApple/></li>
+                <li>
+                    <button onClick={toggleDropdown}>
+                        <FaApple size={"3vh"} style={{maxWidth:"2rem"}}/>
+                    </button>
+                </li>
                 <li>Finder</li>
                 <li>File</li>
                 <li>Edit</li>
@@ -72,9 +81,12 @@ const MenuBar = ({toggleDropdown}) => {
             </Ul>
             <Ul>
                 <li><FaWifi/></li>
-                <li>{ `
-                ${time.hour>12? time.hour-12:time.hour}:${time.min>=10?time.min:`0${time.min}`}
-                ${time.hour>=12?'PM':'AM'}` }</li>
+                <li>
+                    { `
+                        ${time.hour>12? time.hour-12:time.hour}:${time.min>=10?time.min:`0${time.min}`}
+                        ${time.hour>=12?'PM':'AM'}
+                    ` }
+                </li>
                 <li>HyoJin</li>
                 <li><FaSearch/></li>
             </Ul>

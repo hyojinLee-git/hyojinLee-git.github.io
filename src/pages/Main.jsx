@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import ContentsWrapper from '../components/ContentsWrapper/ContentsWrapper';
 import Dropdown from '../components/Dropdown';
 import {useContentDispatch} from '../context/ContentContext'
+import projects from '../db/projects';
 
 
 const StyledMain=styled.div`
@@ -13,6 +14,7 @@ const StyledMain=styled.div`
     box-sizing: border-box;
     right: 0;
     display: flex;
+    max-height: 75vh;
 
 `
 const Ul=styled.ul`
@@ -29,7 +31,7 @@ const Ul=styled.ul`
         cursor: pointer;
         background: none;
         outline: none;
-        width: 85px;
+        width: 100px;
         border:none;
         
         & img{
@@ -42,31 +44,7 @@ const Ul=styled.ul`
     
 `
 
-const projects=[
-    {
-        name:'new_project',
-        title:'New Project',
-        icon:'/images/folder.png',
-    },
-    {
-        name:'seoul_garosu',
-        title:'서울 가로수',
-        icon:'/images/Component223.png',
 
-    },
-    {
-        name:'report_generator',
-        title:'Report Generator',
-        icon:'/images/python.png',
-    },
-
-    {
-        name:'captureMe',
-        title:'CaptureMe',
-        icon:'/images/captureme_logo.png'
-    }
- 
-]
 
 const Main = () => {
     const [openContent,setOpenContent]=useState(false)
@@ -103,12 +81,17 @@ const Main = () => {
                 <Ul>
                     {
                         projects.map(project=>(
-                            <li key={project.name} id={project.name} onClick={onClickOpenContent}>
-                                <button onClick={onClickOpenContent}>                                
+                            <li 
+                                key={project.name} 
+                                id={project.name} 
+                                onClick={onClickOpenContent}
+                            >
+                                <button 
+                                    onClick={onClickOpenContent}    
+                                >                                
                                     <img src={project.icon} alt={project.name}/>
                                     {project.title}
                                 </button>
-
                             </li>
                         ))
                     }

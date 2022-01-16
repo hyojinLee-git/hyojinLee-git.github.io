@@ -12,23 +12,6 @@ const StlyedComponent=styled.div`
     
     
 `
-const Button=styled.button`
-    height: 96px;
-    width: 30vh;
-    height:5rem ;
-    border:none;
-    background:#CDACD9;
-    border-radius: 20px;
-    box-shadow: 10px 12px #6F4376;
-    cursor: pointer;
-    font-size: 3rem;
-    margin-top: 30px;
-    &:active{
-        transform: translate(5px, 5px);
-        box-shadow: 5px 7px #6F4376;
-
-    }
-`
 const Profile=styled.div`
     background:url(/images/Desktop.png);
     width: 30vh;
@@ -41,16 +24,39 @@ const Profile=styled.div`
 const Name=styled.div`
     font-size: 2.3rem;
 `
+const StyledLink=styled(Link)`
+        height: 96px;
+    width: 30vh;
+    height:5rem ;
+    border:none;
+    background:#CDACD9;
+    border-radius: 20px;
+    box-shadow: 10px 12px #6F4376;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-top: 30px;
+    color:black;
+    text-decoration:none;
+    padding-left: 8vh;
+    box-sizing: border-box;
+    &:active{
+        transform: translate(5px, 5px);
+        box-shadow: 5px 7px #6F4376;
+
+    }
+`
 
 const Enter = () => {
     return (
         <StlyedComponent>
             <Profile/>
-            <div style={{position:"absolute", top:"50%",left:"50%",transform:"translate(-50%,15vh)",display:"flex",flexDirection:"column",alignItems:"center"}}>
+            <div 
+                style={{position:"absolute", top:"50%",left:"50%",transform:"translate(-50%,15vh)",display:"flex",flexDirection:"column",alignItems:"center"}}
+            >
                 <Name>HyoJin</Name>
-                <Link to="/main">
-                    <Button>Enter</Button>
-                </Link>
+                <StyledLink to="/main">
+                    Enter
+                </StyledLink>
             </div>
             
         </StlyedComponent>

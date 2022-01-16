@@ -8,6 +8,8 @@ import captureMe from '../../db/posts/captureme.md'
 import techStack from '../../db/posts/tech-stack.md'
 import resume from '../../db/posts/resume.md'
 import { Scrollbars } from 'react-custom-scrollbars';
+import newProject from '../../db/posts/new-project.md'
+import capstoneDesign from '../../db/posts/capstone-design.md'
 
 
 
@@ -30,21 +32,16 @@ const contentsList={
     'report_generator':reportGenerator,
     'captureMe':captureMe,
     'tech-stack':techStack,
-    'resume':resume
+    'resume':resume,
+    'capstone_design':capstoneDesign
 }
 
-const initialMarkdown=`
-    # 어떤 프로젝트를 만들어볼까요?
-`
 
 const ContentsBody = () => {
     const [loading,setLoading]=useState(false);
     const[error,setError]=useState(false)
     const [post,setPost]=useState('')
     const state=useContent();
-
-    //console.log(state)
-    //네번이나 렌더링된다규..?
 
     const renderers = {
         h2:(props)=>(
@@ -74,8 +71,13 @@ const ContentsBody = () => {
 
         setLoading(true)
         if (!contentsList[state]) {
-            setPost(initialMarkdown)
-            setLoading(false)
+            fetch(newProject)
+            .then(res=>res.text())
+            .then(post=>{
+                setPost(post)
+                setLoading(false)
+            })
+            .catch(err=>setError(err))
             return
         }
         
@@ -89,7 +91,7 @@ const ContentsBody = () => {
     },[state])
 
     return (
-       <Scrollbars style={{height:"90%"}}>
+       <Scrollbars autoHide style={{height:"90%"}}>
         <StyledContentsBody>
             <div style={{width:"80%"}}>
                 <ReactMarkdown 

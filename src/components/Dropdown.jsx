@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const DropdownContainer=styled.div`
@@ -32,6 +32,10 @@ const Ul=styled.ul`
 const Li=styled.li`
     cursor: pointer;
     padding:0 10px;
+    & a{
+        color:black;
+        text-decoration: none;
+    }
     &:hover{
         background-color: skyblue;
     }
@@ -39,10 +43,6 @@ const Li=styled.li`
 `
 
 const Dropdown = () => {
-    const navigate=useNavigate();
-    const goEnter=()=>{
-        navigate('/enter')
-    }
 
     return (
         <DropdownContainer>
@@ -56,7 +56,9 @@ const Dropdown = () => {
                 <Li>Shut Down</Li>
                 <hr/>
                 <Li>Lock Screen</Li>
-                <Li onClick={goEnter}>Log Out HyoJin</Li>
+                <Li>
+                    <Link to="/enter">Log Out HyoJin</Link>
+                </Li>
             </Ul>
         </DropdownContainer>
     );

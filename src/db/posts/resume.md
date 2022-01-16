@@ -60,9 +60,13 @@ object detectioin, raspberry pi를 이용한 도보 안내장치입니다.
 ## Skill.
 
 - Front-End : JavaScript, React.js, HTML/CSS
+
 - Back-End : Nodejs, Express, MySQL
+
 - Deployments: Netlify, AWS
+
 - Collaborations: Figma, Notion,Slack,Github
+
 - Etc. : Android studio,Python, git
 
 ---
@@ -70,7 +74,16 @@ object detectioin, raspberry pi를 이용한 도보 안내장치입니다.
 ## Study.
 
 - Slack Clone Coding(2021.10~)
+
 - 온라인 알고리즘 스터디(2021.03~2021.11)
+
+---
+
+## Certificate.
+
+- TOEIC Speaking Lv.6(150) 2020.02.26
+
+- 컴퓨터활용능력 2급 2021.08.20
 
 ---
 
