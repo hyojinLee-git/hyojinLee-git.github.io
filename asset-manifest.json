@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.41e08a48.css",
-    "main.js": "/static/js/main.46d12100.js",
+    "main.js": "/static/js/main.79c8cde7.js",
     "static/js/787.9b9c0edf.chunk.js": "/static/js/787.9b9c0edf.chunk.js",
-    "static/media/resume.md": "/static/media/resume.822b78dd3f73b627edee.md",
-    "static/media/seoul-garosu.md": "/static/media/seoul-garosu.2221f5326be5529fe7e8.md",
+    "static/media/resume.md": "/static/media/resume.bb4c52feec63f39f4115.md",
+    "static/media/seoul-garosu.md": "/static/media/seoul-garosu.eb5c4e8a4d97ee4ee340.md",
+    "static/media/captureme.md": "/static/media/captureme.1f83cbe252e116031b49.md",
     "static/media/tech-stack.md": "/static/media/tech-stack.8424437c26f6c90d4816.md",
-    "static/media/report-generator.md": "/static/media/report-generator.da36b811d73f9b399a1a.md",
+    "static/media/capstone-design.md": "/static/media/capstone-design.66c1553076d92cfbde8d.md",
+    "static/media/report-generator.md": "/static/media/report-generator.403891d9b02bde052f86.md",
     "index.html": "/index.html",
-    "static/media/captureme.md": "/static/media/captureme.304081653cf5468f4fa4.md",
+    "static/media/new-project.md": "/static/media/new-project.e17b036825d6368f0548.md",
     "main.41e08a48.css.map": "/static/css/main.41e08a48.css.map",
-    "main.46d12100.js.map": "/static/js/main.46d12100.js.map",
+    "main.79c8cde7.js.map": "/static/js/main.79c8cde7.js.map",
     "787.9b9c0edf.chunk.js.map": "/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41e08a48.css",
-    "static/js/main.46d12100.js"
+    "static/js/main.79c8cde7.js"
   ]
 }
