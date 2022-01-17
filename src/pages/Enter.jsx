@@ -25,7 +25,7 @@ const Name=styled.div`
     font-size: 2.3rem;
 `
 const StyledLink=styled(Link)`
-        height: 96px;
+    height: 96px;
     width: 30vh;
     height:5rem ;
     border:none;
@@ -37,7 +37,7 @@ const StyledLink=styled(Link)`
     margin-top: 30px;
     color:black;
     text-decoration:none;
-    padding-left: 8vh;
+    text-align: center;
     box-sizing: border-box;
     &:active{
         transform: translate(5px, 5px);
