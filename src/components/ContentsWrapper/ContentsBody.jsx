@@ -9,7 +9,7 @@ import techStack from '../../db/posts/tech-stack.md'
 import resume from '../../db/posts/resume.md'
 import { Scrollbars } from 'react-custom-scrollbars';
 import newProject from '../../db/posts/new-project.md'
-import capstoneDesign from '../../db/posts/capstone-design.md'
+import seeStead from '../../db/posts/see-stead.md'
 
 
 
@@ -33,7 +33,7 @@ const contentsList={
     'captureMe':captureMe,
     'tech-stack':techStack,
     'resume':resume,
-    'capstone_design':capstoneDesign
+    'seeStead':seeStead
 }
 
 

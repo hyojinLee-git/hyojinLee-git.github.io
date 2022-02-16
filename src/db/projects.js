@@ -21,8 +21,8 @@ export default [
     icon: '/images/captureme_logo.png',
   },
   {
-    name: 'capstone_design',
-    title: '시각장애인을 위한 도보안내장치',
-    icon: '/images/Raspberry_Pi-Logo.png',
+    name: 'seeStead',
+    title: 'SeeStead',
+    icon: '/images/seestead.png',
   },
 ];
