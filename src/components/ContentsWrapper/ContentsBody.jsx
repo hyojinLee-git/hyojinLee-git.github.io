@@ -25,6 +25,11 @@ const StyledContentsBody=styled.div`
     & #prize{
         width: 50%;
     }
+
+    & .logo{
+        width: 128px;
+        height: 128px;
+    }
 `
 
 const contentsList={
@@ -56,7 +61,8 @@ const ContentsBody = () => {
                     alt={alt} 
                     src={src} 
                     id={state==='seoul_garosu'&& alt==='prize'?'prize':''}
-                    style={{ maxWidth: "100%" }}  
+                    style={{ maxWidth: "100%" }}
+                    className={alt==='logo'?'logo':''}
                 />
         ),
         a:(props)=>(
