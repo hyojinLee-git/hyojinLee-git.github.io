@@ -48,10 +48,11 @@ const DockBar = ({onClickOpenContent}) => {
     return (
         <StyledDockBar>
             <Ul>
-                <li onClick={onClickOpenContent} id="resume">
-                    <button>
+                <li>
+                    <ExternalLink
+                        href='https://rural-dingo-36b.notion.site/Front-end-Developer-f16644d350b94b27927c3bd8543398cc'>
                         <img src="/images/resume.png" alt="resume"/>
-                    </button>
+                    </ExternalLink>
                 </li>
                 <li>
                     <ExternalLink 

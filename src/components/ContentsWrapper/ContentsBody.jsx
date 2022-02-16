@@ -6,7 +6,6 @@ import seoulGarosu from '../../db/posts/seoul-garosu.md';
 import reportGenerator from '../../db/posts/report-generator.md'
 import captureMe from '../../db/posts/captureme.md'
 import techStack from '../../db/posts/tech-stack.md'
-import resume from '../../db/posts/resume.md'
 import { Scrollbars } from 'react-custom-scrollbars';
 import newProject from '../../db/posts/new-project.md'
 import seeStead from '../../db/posts/see-stead.md'
@@ -37,7 +36,6 @@ const contentsList={
     'report_generator':reportGenerator,
     'captureMe':captureMe,
     'tech-stack':techStack,
-    'resume':resume,
     'seeStead':seeStead
 }
 
