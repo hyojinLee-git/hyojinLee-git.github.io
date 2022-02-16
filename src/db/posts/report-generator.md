@@ -11,10 +11,6 @@
 - python
 - openpyxl
 
-## 플로우 차트
-
-![report_generator_flowchart](/images/markdown/report_generator_flowchart.png)
-
 ## 효과
 
 - 반복적으로 보고서 시트를 수기로 만들어야 했던 부분을 자동화시켜 업무에 소요되는 시간을 75% 단축시킬 수 있었습니다.

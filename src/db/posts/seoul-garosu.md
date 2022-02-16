@@ -47,8 +47,6 @@
 
 - **Styled-Component**를 사용하며 컴포넌트의 재사용성의 편리함을 알 수 있었습니다.
 
-# 📷ScreenShot
-
 # 🔗Source
 
 [https://github.com/bobaejeon/garosero](https://github.com/bobaejeon/garosero)
