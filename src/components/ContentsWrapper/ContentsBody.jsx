@@ -63,6 +63,7 @@ const ContentsBody = () => {
                     id={state==='seoul_garosu'&& alt==='prize'?'prize':''}
                     style={{ maxWidth: "100%" }}
                     className={alt==='logo'?'logo':''}
+                    
                 />
         ),
         a:(props)=>(

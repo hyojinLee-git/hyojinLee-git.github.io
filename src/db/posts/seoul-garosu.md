@@ -2,49 +2,55 @@
 
 # SEOUL GAROSU
 
-## 서비스 개요
+# 서울가로수
 
-나무 돌보미 사업 활성화를 위한 나만의 가로수 입양/관리 앱입니다.
+![thumbnail](/images/markdown/seoul_garosu_tumbnail.png)
 
-![screenshot](/images/markdown/seoul_garosu_screenshot.png)
+# 💡Topic
 
-## 사용 기술
+[나무돌보미 사업](https://parks.seoul.go.kr/friend/caretreeintroduce.do)을 DT를 통해 활성화시키기 위한 서울가로수 어플리케이션입니다.
 
-### Front-end
+# 📝Summary
 
-- Android Studio
+방치된 가로수를 시민들이 직접 돌볼 수 있도록 ‘나무 돌보미’라는 사업이 생겨났습니다. 하지만 코로나 상황의 어려움과 전화로 접수해야 하는 신청과정의 불편함이 생겼습니다. 이를 해결하기 위해 서울가로수라는 어플을 제작하여 입양 과정의 복잡성, 참여 지속성을 개선시켰습니다.
+
+# 🏆Prize
+
+공공데이터 해커톤 서비스개발 부문 `대상` 수상
+
+# 🛠️Tech Stack
+
+- Android, Java
+
 - React
-
-### Back-end
 
 - Firebase
 
-### Collaboration
+# ✋Part
 
-- Github, Notion, Figma
+- 프로토타입 제작
 
-## 서비스 플로우 차트
-
-![flowchart](/images/markdown/seoul_garosu_flowchart.png)
-
-## 기여한 부분
-
-- 나무돌보미 신청 페이지 제작
-- 나무 돌보미 사업 설명 및 나무 돌보기 팁 페이지 제작
 - 데이터 시각화 페이지 제작
 
-## 수상
+- 나무 돌보미 신청 페이지 제작
 
-공공데이터 해커톤 서비스 개발 부문 대상 수상
+- 나무 돌보미 팁 페이지 제작
 
-![prize](/images/markdown/seoul_garosu_prize.jpg)
+# 📖Learned
 
-## 기술적으로 어려웠던 점
+- 백엔드 구축을 따로 하지 않고 BaaS인 **Firebase**를 이용하였습니다.
+- 리액트를 이용해 맡은 페이지를 개발,배포하고 **웹뷰**를 이용해 안드로이드 앱에 링크를 넣기로 하였습니다.
 
-- 팀의 주제상 웹보다는 앱으로 구현하는 것이 더 낫다고 판단되었습니다. 따라서 개발에 기여하기 위해 리액트를 이용해 필요한 페이지를 개발,배포하고 웹뷰를 이용해 안드로이드 앱에 링크를 넣기로 하였습니다.
+- 나무 돌보미 신청 페이지를 제작하며 유저 정보는 앱에 있고 서버에 신청하는 로직은 웹에 있었습니다. 따라서 유저 정보를 웹으로 전달하기 위해 안드로이드 스튜디오의 **CookieManager**를 이용하였습니다.신청웹페이지에 유저 정보가 담긴 쿠키를 세팅함으로써 이 문제를 해결하였습니다.
 
-- 나무 돌보미 신청 페이지를 제작하며 유저 정보는 앱에 있고 서버에 신청하는 로직은 웹에 있었습니다. 따라서 유저 정보를 웹으로 전달하는 과정이 필요했습니다. 안드로이드 스튜디오의 CookieManager을 통해 신청페이지에 유저 정보가 담긴 쿠키를 세팅함으로써 이 문제를 해결하였습니다.
+- 공공데이터를 이용해 현재 존재하고 있는 가로수 정보를 지도api에 마커표시를 해야 했는데 공공데이터 요청 프로토콜이 **http**를 사용하고 있었습니다. 따라서 **firebase function**을 이용하여 서버에서 데이터를 요청하고 그것을 브라우저에서 요청하는 방식으로 문제를 해결하였습니다.
 
-- 공공데이터를 이용해 현재 존재하고 있는 가로수 정보를 지도api에 마커표시를 해야 했는데 공공데이터 요청 프로토콜이 http를 사용하고 있었습니다. 따라서 firebase function을 이용하여 서버에서 데이터를 요청하고 그것을 브라우저에서 요청하는 방식으로 문제를 해결하였습니다.
+- **Styled-Component**를 사용하며 컴포넌트의 재사용성의 편리함을 알 수 있었습니다.
 
-- firebase와 netlify의 출처(origin)이 달라 cors이슈가 발생하였습니다. 따라서 cors라이브러리를 설치하여 문제를 해결하였습니다.
+# 📷ScreenShot
+
+# 🔗Source
+
+[https://github.com/bobaejeon/garosero](https://github.com/bobaejeon/garosero)
+
+[https://github.com/hyojinLee-git/garosugil](https://github.com/hyojinLee-git/garosugil)
